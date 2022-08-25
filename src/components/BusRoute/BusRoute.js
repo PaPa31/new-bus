@@ -1,9 +1,10 @@
 import React from "react";
 import classes from "./BusRoute.module.css";
+import "./BusRoute.css";
 
 const busRoute = (props) => {
   return (
-    <button onClick={props.clicked} className={classes.BusRoute}>
+    <button className={props.color ? "Red" : undefined} onClick={props.clicked}>
       {props.bus.num}
     </button>
   );

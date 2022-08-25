@@ -1,4 +1,8 @@
 .BusRoute {
+  display: inline-block;
+}
+
+button {
   font: inherit;
   border: 1px solid #515151;
   padding: 8px;
@@ -6,6 +10,6 @@
   margin-left: -1px;
 }
 
-.BusRoute:hover {
+button:hover {
   background-color: #e9e9ed;
 }
