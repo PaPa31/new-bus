@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import BusPark from "../../components/BusPark/BusPark";
+import TimeTable from "../../components/TimeTable/TimeTable";
 
 class BusBuilder extends Component {
   state = {
@@ -25,7 +26,7 @@ class BusBuilder extends Component {
     return (
       <Fragment>
         <BusPark busRoutes={this.state.busRoutes} />
-        <div>Buld Control</div>
+        <TimeTable />
       </Fragment>
     );
   }
