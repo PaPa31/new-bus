@@ -2,12 +2,7 @@ import React from "react";
 import classes from "./BusRoute.module.css";
 
 const busRoute = (props) => {
-  return (
-    <div className={classes.BusRoute}>
-      <div>Old Timetable</div>
-      <div>New Timetable</div>
-    </div>
-  );
+  return <button className={classes.BusRoute}>{props.bus.num}</button>;
 };
 
 export default busRoute;

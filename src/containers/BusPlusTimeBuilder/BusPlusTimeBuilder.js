@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
-import BusRoute from "../../components/BusRoute/BusRoute";
+import BusPark from "../../components/BusPark/BusPark";
 
-class ParkBuilder extends Component {
+class BusBuilder extends Component {
   state = {
     busRoutes: [
       { id: "16279", startPoint: "Клиффорд", endPoint: "c/о Русь", num: 296 },
@@ -20,13 +20,14 @@ class ParkBuilder extends Component {
       },
     ],
   };
+
   render() {
     return (
       <Fragment>
-        <BusRoute routes={this.state.busRoutes} />
+        <BusPark busRoutes={this.state.busRoutes} />
         <div>Buld Control</div>
       </Fragment>
     );
   }
 }
-export default ParkBuilder;
+export default BusBuilder;

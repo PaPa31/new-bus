@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Layout from "./components/Layout/Layout";
-import ParkBuilder from "./containers/ParkBuilder/ParkBuilder";
+import BusPlusTimeBuilder from "./containers/BusPlusTimeBuilder/BusPlusTimeBuilder";
 
 class App extends Component {
   render() {
     return (
       <div>
         <Layout>
-          <ParkBuilder />
+          <BusPlusTimeBuilder />
         </Layout>
       </div>
     );

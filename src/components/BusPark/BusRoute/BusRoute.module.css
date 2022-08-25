@@ -1,0 +1,11 @@
+.BusRoute {
+  font: inherit;
+  border: 1px solid #515151;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: -1px;
+}
+
+.BusRoute:hover {
+  background-color: #e9e9ed;
+}
