@@ -4,7 +4,8 @@ h2 {
 
 h3,
 h4,
-h5 {
+h5,
+h6 {
   overflow: hidden;
   margin: 0;
   white-space: nowrap;
@@ -16,8 +17,19 @@ h3 {
   font-size: 1em;
 }
 
+h4 {
+  padding: 2px;
+}
+
 h5 {
   text-align: left;
+  padding: 1px 1px 1px;
+}
+
+h6 {
+  color: #505000;
+  font-size: 0.9em;
+  font-family: helvetica;
 }
 
 table {

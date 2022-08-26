@@ -8,6 +8,9 @@ const routeTimeTable = (props) => {
       <h2>{props.num}</h2>
       <NewAndOld>c 29.06.2022:</NewAndOld>
       <NewAndOld>c 23.08.2022:</NewAndOld>
+      <h6>
+        Перевозчик – ООО «Оренбурггазтранс», телефон диспетчерской 73-20-50
+      </h6>
     </div>
   );
 };
