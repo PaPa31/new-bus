@@ -9,10 +9,13 @@ class BusBuilder extends Component {
     selectedBuses: [],
   };
 
-  selectBusHandler = (index) => {
-    const newArray = [...this.state.selectedBuses];
-    newArray[index] = !this.state.selectedBuses[index];
-    this.setState({ selectedBuses: [...newArray] });
+  selectBusHandler = (bus, index) => {
+    const b = this.state.selectedBuses;
+    const newArray = [...b];
+    newArray[index] = !b[index];
+    const newBuses = [...this.state.buses];
+    newBuses[index] = newArray[index] ? bus : undefined;
+    this.setState({ selectedBuses: [...newArray], buses: [...newBuses] });
   };
 
   render() {
@@ -22,7 +25,10 @@ class BusBuilder extends Component {
           clicked={this.selectBusHandler}
           selectedBuses={this.state.selectedBuses}
         />
-        <TimeTable />
+        <TimeTable
+          selectedRoutes={this.state.buses}
+          length={this.state.buses.filter(Boolean).length}
+        />
       </Fragment>
     );
   }

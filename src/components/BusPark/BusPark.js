@@ -22,14 +22,16 @@ const busRoutes = [
 const busPark = (props) => {
   return (
     <div className={classes.BusPark}>
-      {busRoutes.map((bus, i) => (
-        <BusRoute
-          key={bus.id}
-          color={props.selectedBuses[i]}
-          bus={bus}
-          clicked={() => props.clicked(i)}
-        />
-      ))}
+      {busRoutes.map((bus, i) => {
+        return (
+          <BusRoute
+            key={bus.id}
+            color={props.selectedBuses[i]}
+            bus={bus}
+            clicked={() => props.clicked(bus, i)}
+          />
+        );
+      })}
     </div>
   );
 };
