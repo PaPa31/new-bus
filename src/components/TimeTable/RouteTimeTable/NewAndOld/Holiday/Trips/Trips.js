@@ -5,7 +5,7 @@ import ThereFrom from "./ThereFrom/ThereFrom";
 const trips = (props) => (
   <div className={classes.Trips}>
     <ThereFrom direction="Туда" />
-    <ThereFrom direction="Обратно" />
+    <ThereFrom direction="Оттуда" />
   </div>
 );
 

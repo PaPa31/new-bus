@@ -1,0 +1,30 @@
+h2 {
+  margin: 0.2em;
+}
+
+h3,
+h4,
+h5 {
+  overflow: hidden;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+h3 {
+  color: #5a5050;
+  font-size: 1em;
+}
+
+h5 {
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #777;
+  padding: 6px;
+}

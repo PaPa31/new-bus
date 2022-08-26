@@ -5,7 +5,7 @@ const table = (props) => {
   return (
     <table>
       <td>
-        <tr>8:00</tr>
+        <tr>20:00</tr>
       </td>
     </table>
   );

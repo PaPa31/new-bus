@@ -5,9 +5,9 @@ import Holiday from "./Holiday/Holiday";
 const newAndOld = (props) => {
   return (
     <div className={classes.NewAndOld}>
-      <h2>{props.children}</h2>
-      <Holiday holiday="Рабочие дни" />
-      <Holiday holiday="Выходные дни" />
+      <h3>{props.children}</h3>
+      <Holiday holiday="Рабочие" />
+      <Holiday holiday="Выходные" />
     </div>
   );
 };

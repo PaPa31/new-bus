@@ -1,6 +1,7 @@
 import React from "react";
 import RouteTimeTable from "./RouteTimeTable/RouteTimeTable";
 import classes from "./TimeTable.module.css";
+import "./TimeTable.css";
 
 const timeTable = (props) => {
   return (

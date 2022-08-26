@@ -5,7 +5,7 @@ import classes from "./ThereFrom.module.css";
 const thereFrom = (props) => {
   return (
     <div className={classes.ThereFrom}>
-      <h3>{props.direction}</h3>
+      <h5>{props.direction}</h5>
       <Table />
     </div>
   );
