@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
 import BusPark from "../../components/BusPark/BusPark";
 import ByRoute from "../../components/ByRoute/ByRoute";
 import ByTime from "../../components/ByTime/ByTime";
@@ -43,9 +44,9 @@ class BusBuilder extends Component {
         <div className={classes.Buttons}>
           {length > 0 ? (
             <Direction
-              clicked={this.toggleDirectionHandler}
-              fromCity={this.state.fromCity}
-              fromDacha={this.state.fromDacha}
+              clicked={this.props.onToggle}
+              city={this.props.city}
+              dacha={this.props.dacha}
             />
           ) : null}
           {length > 1 ? (
@@ -64,4 +65,17 @@ class BusBuilder extends Component {
     );
   }
 }
-export default BusBuilder;
+
+const mapStateToProps = (state) => {
+  return {
+    city: state.fromCity,
+    dacha: state.fromDacha,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onToggle: (dir) => dispatch({ type: "TOGGLE", value: dir }),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(BusBuilder);
