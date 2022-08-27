@@ -6,8 +6,8 @@ const newAndOld = (props) => {
   return (
     <div className={classes.NewAndOld}>
       <h3>{props.children}</h3>
-      <Holiday holiday="Рабочие" />
-      <Holiday holiday="Выходные" />
+      <Holiday holidayOrNot="Рабочие" />
+      <Holiday holidayOrNot="Выходные" holiday />
     </div>
   );
 };

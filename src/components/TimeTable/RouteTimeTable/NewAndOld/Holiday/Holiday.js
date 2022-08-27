@@ -5,14 +5,8 @@ import classes from "./Holiday.module.css";
 const holidayOrNot = (props) => {
   return (
     <div className={classes.Holiday}>
-      <h4
-        style={
-          props.holiday === "Выходные"
-            ? { color: "#831313" }
-            : { color: "#004400" }
-        }
-      >
-        {props.holiday}
+      <h4 className={props.holiday ? classes.Red : classes.Green}>
+        {props.holidayOrNot}
       </h4>
       <Trips />
     </div>
