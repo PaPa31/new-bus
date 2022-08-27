@@ -6,6 +6,7 @@ import ByTime from "../../components/ByTime/ByTime";
 import Direction from "../../components/Direction/Direction";
 import MergeRoutes from "../../components/MergeRoutes/MergeRoutes";
 import classes from "./BusPlusTime.module.css";
+import * as actionTypes from "../../store/actions";
 
 class BusBuilder extends Component {
   state = {
@@ -75,7 +76,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onToggle: (dir) => dispatch({ type: "TOGGLE", value: dir }),
+    onToggle: (dir) =>
+      dispatch({ type: actionTypes.TOGGLE_THERE_FROM, direction: dir }),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(BusBuilder);

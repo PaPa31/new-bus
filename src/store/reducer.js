@@ -1,15 +1,15 @@
+import * as actionTypes from "./actions";
+
 const initialState = {
   fromCity: true,
   fromDacha: true,
 };
 
 const reducer = (state = initialState, action) => {
-  if (action.type === "TOGGLE") {
-    console.log(action.value);
-    console.log(state[action.value]);
+  if (action.type === actionTypes.TOGGLE_THERE_FROM) {
     return {
       ...state,
-      [action.value]: !state[action.value],
+      [action.direction]: !state[action.direction],
     };
   }
   return state;
