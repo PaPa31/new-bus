@@ -22,6 +22,10 @@ class BusBuilder extends Component {
     this.setState({ selectedBuses: [...newArray], buses: [...newBuses] });
   };
 
+  toggleRouteOrTimeHandler = () => {
+    this.setState({ byRoute: !this.state.byRoute });
+  };
+
   render() {
     const length = this.state.buses.filter(Boolean).length;
     return (
@@ -32,7 +36,12 @@ class BusBuilder extends Component {
         />
         <div className={classes.Buttons}>
           {length > 0 ? <Direction /> : null}
-          {length > 1 ? <MergeRoutes /> : null}
+          {length > 1 ? (
+            <MergeRoutes
+              clicked={this.toggleRouteOrTimeHandler}
+              toggle={this.state.byRoute}
+            />
+          ) : null}
         </div>
         {this.state.byRoute ? (
           <ByRoute selectedRoutes={this.state.buses} />
