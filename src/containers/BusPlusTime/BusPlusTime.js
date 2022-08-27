@@ -11,6 +11,8 @@ class BusBuilder extends Component {
     buses: [],
     selectedBuses: [],
     byRoute: true,
+    fromCity: true,
+    fromDacha: true,
   };
 
   selectBusHandler = (bus, index) => {
@@ -26,6 +28,10 @@ class BusBuilder extends Component {
     this.setState({ byRoute: !this.state.byRoute });
   };
 
+  toggleDirectionHandler = (dir) => {
+    this.setState({ [dir]: !this.state[dir] });
+  };
+
   render() {
     const length = this.state.buses.filter(Boolean).length;
     return (
@@ -35,7 +41,13 @@ class BusBuilder extends Component {
           selectedBuses={this.state.selectedBuses}
         />
         <div className={classes.Buttons}>
-          {length > 0 ? <Direction /> : null}
+          {length > 0 ? (
+            <Direction
+              clicked={this.toggleDirectionHandler}
+              fromCity={this.state.fromCity}
+              fromDacha={this.state.fromDacha}
+            />
+          ) : null}
           {length > 1 ? (
             <MergeRoutes
               clicked={this.toggleRouteOrTimeHandler}

@@ -4,8 +4,16 @@ import classes from "./Direction.module.css";
 const direction = (props) => {
   return (
     <div className={classes.Direction}>
-      <button>Из города</button>
-      <button>Из садов</button>
+      {props.fromDacha && (
+        <button onClick={() => props.clicked("fromCity")}>
+          {props.fromCity ? "Из города" : "Вернуть"}
+        </button>
+      )}
+      {props.fromCity && (
+        <button onClick={() => props.clicked("fromDacha")}>
+          {props.fromDacha ? "Из садов" : "Вернуть"}
+        </button>
+      )}
     </div>
   );
 };
