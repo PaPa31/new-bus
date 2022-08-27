@@ -6,10 +6,9 @@ h3,
 h4,
 h5,
 h6 {
-  overflow: hidden;
+  overflow: visible;
   margin: 0;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 h3 {
@@ -19,6 +18,7 @@ h3 {
 
 h4 {
   padding: 2px;
+  width: 3.2em;
 }
 
 h5 {
@@ -30,6 +30,10 @@ h6 {
   color: #505000;
   font-size: 0.9em;
   font-family: helvetica;
+  white-space: unset;
+  max-width: min-content;
+  text-align: left;
+  margin: 0 5px;
 }
 
 table {
