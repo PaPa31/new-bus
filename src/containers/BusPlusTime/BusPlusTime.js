@@ -30,8 +30,10 @@ class BusBuilder extends Component {
           clicked={this.selectBusHandler}
           selectedBuses={this.state.selectedBuses}
         />
-        {length > 0 ? <Direction /> : null}
-        {length > 1 ? <MergeRoutes /> : null}
+        <div className={classes.Buttons}>
+          {length > 0 ? <Direction /> : null}
+          {length > 1 ? <MergeRoutes /> : null}
+        </div>
         {this.state.byRoute ? (
           <ByRoute selectedRoutes={this.state.buses} />
         ) : (
