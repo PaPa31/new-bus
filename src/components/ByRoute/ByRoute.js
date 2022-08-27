@@ -1,16 +1,15 @@
 import React from "react";
 import RouteTimeTable from "./RouteTimeTable/RouteTimeTable";
-import classes from "./TimeTable.module.css";
-import "./TimeTable.css";
+import classes from "./ByRoute.module.css";
+import "./ByRoute.css";
 
-const timeTable = (props) => {
+const byTime = (props) => {
   return (
-    <div className={classes.TimeTable}>
+    <div className={classes.ByRoute}>
       {props.selectedRoutes.filter(Boolean).map((route) => {
         return <RouteTimeTable key={route.id} num={route.num} />;
       })}
     </div>
   );
 };
-
-export default timeTable;
+export default byTime;

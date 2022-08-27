@@ -1,12 +1,12 @@
 import React from "react";
-import Table from "./Table/Table";
+import TimeTable from "./TimeTable/TimeTable";
 import classes from "./ThereFrom.module.css";
 
 const thereFrom = (props) => {
   return (
     <div className={classes.ThereFrom}>
       <h5>{props.direction}</h5>
-      <Table />
+      <TimeTable />
     </div>
   );
 };

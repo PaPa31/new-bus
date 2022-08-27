@@ -1,13 +1,16 @@
 import React, { Component, Fragment } from "react";
 import BusPark from "../../components/BusPark/BusPark";
-import TimeTable from "../../components/TimeTable/TimeTable";
+import ByRoute from "../../components/ByRoute/ByRoute";
+import ByTime from "../../components/ByTime/ByTime";
 import Direction from "../../components/Direction/Direction";
+import MergeRoutes from "../../components/MergeRoutes/MergeRoutes";
 import classes from "./BusPlusTime.module.css";
 
 class BusBuilder extends Component {
   state = {
     buses: [],
     selectedBuses: [],
+    byRoute: true,
   };
 
   selectBusHandler = (bus, index) => {
@@ -28,7 +31,12 @@ class BusBuilder extends Component {
           selectedBuses={this.state.selectedBuses}
         />
         {length > 0 ? <Direction /> : null}
-        <TimeTable selectedRoutes={this.state.buses} />
+        {length > 1 ? <MergeRoutes /> : null}
+        {this.state.byRoute ? (
+          <ByRoute selectedRoutes={this.state.buses} />
+        ) : (
+          <ByTime />
+        )}
       </Fragment>
     );
   }

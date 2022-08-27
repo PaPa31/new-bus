@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./Table.module.css";
+import classes from "./TimeTable.module.css";
 
-const table = (props) => {
+const timeTable = (props) => {
   return (
     <table>
       <tbody>
@@ -13,4 +13,4 @@ const table = (props) => {
   );
 };
 
-export default table;
+export default timeTable;
