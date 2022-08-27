@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import BusPark from "../../components/BusPark/BusPark";
 import TimeTable from "../../components/TimeTable/TimeTable";
+import Direction from "../../components/Direction/Direction";
 import classes from "./BusPlusTime.module.css";
 
 class BusBuilder extends Component {
@@ -19,16 +20,15 @@ class BusBuilder extends Component {
   };
 
   render() {
+    const length = this.state.buses.filter(Boolean).length;
     return (
       <Fragment>
         <BusPark
           clicked={this.selectBusHandler}
           selectedBuses={this.state.selectedBuses}
         />
-        <TimeTable
-          selectedRoutes={this.state.buses}
-          length={this.state.buses.filter(Boolean).length}
-        />
+        {length > 0 ? <Direction /> : null}
+        <TimeTable selectedRoutes={this.state.buses} />
       </Fragment>
     );
   }
