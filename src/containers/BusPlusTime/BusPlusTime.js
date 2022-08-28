@@ -45,7 +45,7 @@ class BusBuilder extends Component {
         <div className={classes.Buttons}>
           {length > 0 ? (
             <Direction
-              clicked={this.props.onToggle}
+              clicked={this.props.onToggleCityDacha}
               city={this.props.city}
               dacha={this.props.dacha}
             />
@@ -76,8 +76,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onToggle: (dir) =>
-      dispatch({ type: actionTypes.TOGGLE_THERE_FROM, direction: dir }),
+    onToggleCityDacha: (dir) =>
+      dispatch({ type: actionTypes.TOGGLE_CITY_DACHA, direction: dir }),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(BusBuilder);

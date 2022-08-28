@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  if (action.type === actionTypes.TOGGLE_THERE_FROM) {
+  if (action.type === actionTypes.TOGGLE_CITY_DACHA) {
     return {
       ...state,
       [action.direction]: !state[action.direction],

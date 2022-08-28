@@ -1,14 +1,14 @@
 import React from "react";
 import TimeTable from "./TimeTable/TimeTable";
-import classes from "./ThereFrom.module.css";
+import classes from "./CityDacha.module.css";
 
-const thereFrom = (props) => {
+const cityDacha = (props) => {
   return (
-    <div className={classes.ThereFrom}>
+    <div className={classes.CityDacha}>
       <h5>{props.direction}</h5>
       <TimeTable />
     </div>
   );
 };
 
-export default thereFrom;
+export default cityDacha;

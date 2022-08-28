@@ -2,3 +2,19 @@
   display: inline-block;
   border: 1px dashed #333;
 }
+
+.TwoBlocks {
+  display: inline-block;
+}
+
+.Center {
+  text-align: center;
+}
+
+.Wider {
+  max-width: max-content;
+}
+
+.Narrower {
+  max-width: min-content;
+}

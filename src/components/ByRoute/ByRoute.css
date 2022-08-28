@@ -28,10 +28,8 @@ h5 {
 
 h6 {
   color: #505000;
-  font-size: 0.9em;
-  font-family: helvetica;
+  font-size: 0.8em;
   white-space: unset;
-  max-width: min-content;
   text-align: left;
   margin: 0 5px;
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import classes from "./Trips.module.css";
-import ThereFrom from "./ThereFrom/ThereFrom";
+import CityDacha from "./CityDacha/CityDacha";
 
 const trips = (props) => (
   <div className={classes.Trips}>
-    {props.dacha && <ThereFrom direction="Туда" />}
-    {props.city && <ThereFrom direction="Оттуда" />}
+    {props.dacha && <CityDacha direction="Туда" />}
+    {props.city && <CityDacha direction="Оттуда" />}
   </div>
 );
 
