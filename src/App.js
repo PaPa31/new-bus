@@ -5,11 +5,12 @@ import BusPlusTime from "./containers/BusPlusTime/BusPlusTime";
 class App extends Component {
   render() {
     return (
-      <div>
-        <Layout>
-          <BusPlusTime />
-        </Layout>
-      </div>
+      <Layout>
+        <h1 className="text-3xl font-bold underline text-center mb-4">
+          Da4aBus
+        </h1>
+        <BusPlusTime />
+      </Layout>
     );
   }
 }
