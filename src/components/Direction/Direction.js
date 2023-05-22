@@ -5,13 +5,19 @@ const direction = (props) => {
   return (
     <div className={classes.Direction}>
       {props.dacha && (
-        <button onClick={() => props.clicked("fromCity")}>
-          {props.city ? "Из города" : "Вернуть"}
+        <button
+          className={props.city ? undefined : "Red"}
+          onClick={() => props.clicked("fromCity")}
+        >
+          Из города
         </button>
       )}
       {props.city && (
-        <button onClick={() => props.clicked("fromDacha")}>
-          {props.dacha ? "Из садов" : "Вернуть"}
+        <button
+          className={props.dacha ? undefined : "Red"}
+          onClick={() => props.clicked("fromDacha")}
+        >
+          Из садов
         </button>
       )}
     </div>
