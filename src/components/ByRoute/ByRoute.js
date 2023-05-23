@@ -3,7 +3,7 @@ import RouteTimeTable from "./RouteTimeTable/RouteTimeTable";
 import classes from "./ByRoute.module.css";
 import "./ByRoute.css";
 
-const byTime = (props) => {
+const byRoute = (props) => {
   return (
     <div className={classes.ByRoute}>
       {props.selectedRoutes.filter(Boolean).map((route) => {
@@ -12,4 +12,4 @@ const byTime = (props) => {
     </div>
   );
 };
-export default byTime;
+export default byRoute;
